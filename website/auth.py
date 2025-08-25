@@ -17,7 +17,7 @@ def login():
             login_user(user, remember=True)
             return redirect(url_for('views.home'))
         else:
-            flash('登录失败', category='error')
+            flash('​​Login failed​​.', category='error')
     
     return render_template("login.html", user=current_user)
 
@@ -36,7 +36,7 @@ def sign_up():
         
         # 只检查邮箱是否已存在
         if User.query.filter_by(email=email).first():
-            flash('邮箱已存在', category='error')
+            flash('Email already exists.', category='error')
         else:
             # 创建新用户
             new_user = User(
