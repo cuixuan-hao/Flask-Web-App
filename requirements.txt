@@ -1,3 +1,5 @@
 flask
 Flask-SQLAlchemy
 flask-login
+Flask-Migrate  # <-- 新增：用于数据库版本管理
+gunicorn       # <-- 新增：用于生产环境启动
